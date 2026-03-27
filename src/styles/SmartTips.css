@@ -1,0 +1,53 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  animation: fadeIn 0.3s;
+  color: #fff;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.smart-tip-card {
+  background-color: #222;
+  border: 1px solid #d9534f;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  animation: slideIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
